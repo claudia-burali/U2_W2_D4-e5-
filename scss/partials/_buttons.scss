@@ -1,0 +1,23 @@
+.btn {
+    display: inline-block;
+    border-radius: 2px;
+    padding: $padding-default;
+    margin: 3px;
+    &:hover {
+      transform: scale(0.98);
+    }
+  }
+  
+  $btn-colors: (
+    main: $main-color,
+    secondary: $secondary-color,
+    tertiary: $tertiary-color
+  );
+  
+  @each $color, $value in $btn-colors {
+    .btn-#{$color} {
+      background-color: $value;
+      color: $light-color;
+    }
+  }
+  
